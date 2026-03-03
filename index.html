@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FGM Advocacia Criminal | Advogado Criminalista 24h em Campo Grande RJ</title>
+    <meta name="description"
+        content="Defesa criminal especializada no Rio de Janeiro. Plantão 24h para audiência de custódia, habeas corpus e acompanhamento em delegacia. FGM Advocacia em Campo Grande.">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/api/icons/scale?color=C5A059" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0D2C43',
+                        secondary: '#C5A059',
+                        accent: '#F8FAFC',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-gold': 'pulse-gold 2s infinite',
+                    },
+                    keyframes: {
+                        'pulse-gold': {
+                            '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(197, 160, 89, 0.7)' },
+                            '50%': { transform: 'scale(1.05)', boxShadow: '0 0 20px 10px rgba(197, 160, 89, 0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        .animate-pulse-gold {
+            animation: pulse-gold 2s infinite;
+        }
+
+        @keyframes pulse-gold {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px 10px rgba(197, 160, 89, 0);
+            }
+        }
+
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        #mobile-menu.hidden-menu {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #mobile-menu.open-menu {
+            max-height: 100vh;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        /* FAQ transition */
+        .faq-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .faq-content.closed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .faq-content.open {
+            max-height: 500px;
+            opacity: 100;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-5">
+        <div class="container mx-auto px-4 md:px-8 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#inicio" class="flex flex-col group cursor-pointer">
+                    <span id="logo-text"
+                        class="font-serif text-2xl font-bold leading-none transition-colors text-primary">
+                        FGM
+                    </span>
+                    <span id="logo-subtext"
+                        class="text-[10px] uppercase tracking-widest font-medium transition-colors text-primary/70">
+                        Advocacia Criminal
+                    </span>
+                </a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#inicio"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">Início</a>
+                <a href="#servicos"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">Serviços</a>
+                <a href="#sobre"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">Sobre</a>
+                <a href="#depoimentos"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">Depoimentos</a>
+                <a href="#faq"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">FAQ</a>
+                <a href="#contato"
+                    class="nav-link text-[11px] lg:text-xs font-bold uppercase tracking-widest transition-colors hover:text-secondary text-primary">Contato</a>
+
+                <a href="https://wa.me/5521991756457" target="_blank" rel="noopener noreferrer"
+                    class="bg-secondary hover:bg-secondary/90 text-primary font-bold py-2 px-4 lg:px-6 rounded-md flex items-center gap-2 transition-all shadow-lg text-xs lg:text-sm">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    Plantão 24h
+                </a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button id="menu-toggle" class="md:hidden text-secondary p-2 focus:outline-none" aria-label="Abrir menu">
+                <i data-lucide="menu" class="w-7 h-7" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden absolute top-full left-0 right-0 bg-primary text-white overflow-hidden shadow-2xl border-t border-white/5 hidden-menu">
+            <nav class="flex flex-col items-center space-y-6">
+                <a href="#inicio"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">Início</a>
+                <a href="#servicos"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">Serviços</a>
+                <a href="#sobre"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">Sobre</a>
+                <a href="#depoimentos"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">Depoimentos</a>
+                <a href="#faq"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">FAQ</a>
+                <a href="#contato"
+                    class="mobile-nav-link text-lg font-bold uppercase tracking-widest hover:text-secondary transition-colors">Contato</a>
+
+                <a href="https://wa.me/5521991756457" target="_blank" rel="noopener noreferrer"
+                    class="bg-secondary text-primary font-bold py-4 px-10 rounded-full flex items-center gap-3 w-[80%] justify-center shadow-xl transform active:scale-95 transition-transform">
+                    <i data-lucide="phone-call" class="w-5 h-5"></i>
+                    Plantão 24h
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-primary">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40 z-10"></div>
+                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=2000"
+                    alt="Judicial Background" class="w-full h-full object-cover opacity-30">
+            </div>
+
+            <div class="container mx-auto px-4 md:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+                <div class="max-w-2xl">
+                    <div
+                        class="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 px-4 py-2 rounded-full text-secondary text-sm font-semibold mb-6 backdrop-blur-sm">
+                        <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                        <span>Advocacia Criminal Especializada • Rio de Janeiro</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif text-white leading-tight mb-6">
+                        Defesa Criminal de <span class="text-secondary italic">Alto Impacto</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
+                        Atuação estratégica em Campo Grande e todo o RJ. Especialistas em custódia e liberdade com <span
+                            class="text-white font-semibold underline decoration-secondary">plantão 24 horas</span>.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="https://wa.me/5521991756457"
+                            class="bg-secondary hover:bg-secondary/90 text-primary font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center gap-2 transition-all transform hover:-translate-y-1 shadow-lg animate-pulse-gold">
+                            Falar com Advogado agora
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <div
+                            class="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-lg">
+                            <div class="flex items-center gap-1 text-secondary">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <span class="text-white font-medium">Nota 5.0 no Google</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-8 border-t border-white/10 pt-8">
+                        <div>
+                            <p class="text-3xl font-serif text-secondary font-bold">87+</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Avaliações Reais</p>
+                        </div>
+                        <div class="w-px h-10 bg-white/10"></div>
+                        <div>
+                            <p class="text-3xl font-serif text-secondary font-bold">24h</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Plantão Criminal</p>
+                        </div>
+                        <div class="w-px h-10 bg-white/10"></div>
+                        <div>
+                            <p class="text-3xl font-serif text-secondary font-bold">RJ</p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest">Presença Total</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative hidden lg:block">
+                    <div
+                        class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-2 border-secondary/30 transform rotate-1">
+                        <img src="https://lh3.googleusercontent.com/d/1rnC2CYcsHma-PCNuYCM3CEpzn4U1HTHh"
+                            alt="Equipe FGM Advocacia Criminal" class="w-full h-auto object-cover">
+                    </div>
+                    <!-- Badge 5.0 -->
+                    <div
+                        class="absolute -top-6 -left-6 bg-white p-5 rounded-2xl shadow-2xl z-20 flex flex-col items-center">
+                        <span class="text-primary font-black text-4xl leading-none">5.0</span>
+                        <div class="flex gap-0.5 text-secondary my-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-[9px] uppercase font-bold text-slate-400 tracking-tighter">Google
+                            Reviews</span>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="servicos" class="py-24 bg-accent">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-3">Especialidades</h2>
+                    <p class="text-3xl md:text-5xl font-serif text-primary mb-6">Excelência Jurídica em Cada Etapa do
+                        Processo</p>
+                    <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+                    <p class="text-slate-600">Oferecemos representação especializada em Direito Penal, atuando com ética
+                        e transparência em todas as fases da defesa criminal.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service cards will be similar -->
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="clock" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Audiência de Custódia</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Intervenção técnica imediata para garantir a
+                            liberdade e os direitos fundamentais em prisões em flagrante.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="scale" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Habeas Corpus</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Ações urgentes para cessar coações ilegais à
+                            liberdade de locomoção em tribunais superiores.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="shield-check" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Violência Doméstica</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Defesa especializada em casos da Lei Maria da
+                            Penha com abordagem humanizada e técnica.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="gavel" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Tráfico de Drogas</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Atuação estratégica em processos complexos de
+                            tráfico, focada em desclassificação e nulidades processuais.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="globe" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Crimes Cibernéticos</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Defesa técnica em crimes de internet, invasão
+                            de dispositivo e crimes contra a honra digital.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="file-lock-2" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Dignidade Sexual</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Acompanhamento rigoroso em processos de crimes
+                            contra a dignidade sexual e stalking.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="user-plus" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Acompanhamento em Delegacia</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Orientação jurídica presencial 24h para
+                            depoimentos e lavratura de flagrantes.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="briefcase" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Tribunal do Júri</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Representação em crimes contra a vida, com
+                            sustentação oral técnica e persuasiva.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div
+                            class="mb-6 inline-block p-3 bg-accent rounded-lg group-hover:bg-primary transition-colors">
+                            <i data-lucide="handshake" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary mb-3 group-hover:text-secondary transition-colors">
+                            Execução Penal</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Revisão de penas, progressão de regime e
+                            pedidos de liberdade condicional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="sobre" class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-accent">
+                            <img src="https://lh3.googleusercontent.com/d/1KP2jTOb8L1Az6fZLyM-GledP4eFyLLUb"
+                                alt="Escritório FGM Interno" class="w-full h-[500px] object-cover">
+                        </div>
+                        <div
+                            class="absolute -bottom-8 -left-8 bg-primary p-8 rounded-xl border-r-8 border-secondary shadow-2xl z-10 max-w-xs">
+                            <i data-lucide="shield-check" class="text-secondary mb-4 w-10 h-10"></i>
+                            <p class="text-white font-serif text-lg leading-tight font-medium italic">
+                                "Estrutura completa e acolhedora em Campo Grande para garantir sua blindagem jurídica."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-3">Sobre o Escritório
+                        </h2>
+                        <h3 class="text-3xl md:text-5xl font-serif text-primary mb-8">FGM Sociedade de Advogados</h3>
+
+                        <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                            Comandada pelos doutores <span class="font-bold text-primary">Anderson Ferreira, Rodrigo
+                                Garcia e Wagner Moura</span>, a FGM é referência em advocacia humanizada e técnica no
+                            Rio de Janeiro.
+                        </p>
+
+                        <p class="text-slate-600 mb-8 leading-relaxed">
+                            Nosso escritório nasceu com a premissa de que o Direito Criminal exige mais do que
+                            conhecimento técnico; exige coragem, agilidade e empatia. Atuamos com foco total no cliente,
+                            garantindo sigilo absoluto e estratégias personalizadas para cada caso, desde a delegacia
+                            até os tribunais superiores.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Atendimento Humanizado</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Foco na Liberdade</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Estratégia Processual</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Transparência Total</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Combate a Abusos</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-primary font-bold">
+                                <i data-lucide="check-circle" class="text-secondary w-5 h-5"></i>
+                                <span>Excelência Técnica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-16 border-t border-slate-100">
+                    <div class="text-center mb-12">
+                        <h4 class="text-2xl font-serif font-bold text-primary">Nossa Equipe de Especialistas</h4>
+                        <div class="w-16 h-1 bg-secondary mx-auto mt-4"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="group text-center">
+                            <div class="relative mb-6 inline-block">
+                                <div
+                                    class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-accent shadow-lg group-hover:border-secondary transition-all mx-auto">
+                                    <img src="dr-rodrigo.webp" alt="Dr. Rodrigo Garcia"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-primary">Dr. Rodrigo Garcia</h5>
+                            <p class="text-secondary font-medium text-sm uppercase tracking-widest">Sócio Criminalista
+                            </p>
+                        </div>
+                        <div class="group text-center">
+                            <div class="relative mb-6 inline-block">
+                                <div
+                                    class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-accent shadow-lg group-hover:border-secondary transition-all mx-auto">
+                                    <img src="https://lh3.googleusercontent.com/d/11q8dDx_Y0QTLwQO4hQWDHJIBxImoNsnx"
+                                        alt="Dr. Anderson Ferreira"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-primary">Dr. Anderson Ferreira</h5>
+                            <p class="text-secondary font-medium text-sm uppercase tracking-widest">Sócio Fundador</p>
+                        </div>
+                        <div class="group text-center">
+                            <div class="relative mb-6 inline-block">
+                                <div
+                                    class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-accent shadow-lg group-hover:border-secondary transition-all mx-auto">
+                                    <img src="https://lh3.googleusercontent.com/d/1CGMrC_2WfFkUJ32c-M10Y6hcOoof0SRC"
+                                        alt="Dr. Wagner Moura"
+                                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                            <h5 class="text-xl font-bold text-primary">Dr. Wagner Moura</h5>
+                            <p class="text-secondary font-medium text-sm uppercase tracking-widest">Sócio Criminalista
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section id="depoimentos" class="py-24 bg-accent relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-8">
+                <div class="text-center max-w-4xl mx-auto mb-20">
+                    <div
+                        class="inline-flex items-center gap-2 mb-6 bg-white px-6 py-2 rounded-full shadow-sm border border-slate-100">
+                        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+                            alt="Google" class="h-4 mr-2" />
+                        <div class="flex gap-1 text-secondary">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                        </div>
+                        <span class="text-primary font-bold text-sm">Nota 5.0 baseada em 87+ avaliações</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-serif text-primary mb-6">A Confiança de Quem <span
+                            class="text-secondary">Conhece o Nosso Trabalho</span></h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto">Somos o escritório de advocacia criminal mais bem
+                        avaliado de Campo Grande, RJ. O compromisso com a liberdade de nossos clientes é nossa
+                        prioridade absoluta.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-xl shadow-primary/5 border border-slate-50 relative group hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="quote"
+                            class="absolute top-8 right-8 text-secondary/10 group-hover:text-secondary/20 transition-colors w-12 h-12"></i>
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-8 leading-relaxed text-sm">"Gostaria de deixar registrado
+                            meus agradecimentos à equipe do escritório FGM advocacia criminal. A estrutura organizada,
+                            ambiente acolhedor, bem como o profissionalismo foram as marcas registradas..."</p>
+                        <div class="flex items-center gap-4 border-t border-slate-50 pt-6">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary font-bold text-lg">
+                                R</div>
+                            <div>
+                                <p class="text-primary font-bold text-base leading-none mb-1">Rafaela Campelo</p>
+                                <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Cliente
+                                    Verificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-xl shadow-primary/5 border border-slate-50 relative group hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="quote"
+                            class="absolute top-8 right-8 text-secondary/10 group-hover:text-secondary/20 transition-colors w-12 h-12"></i>
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-8 leading-relaxed text-sm">"Quero aqui deixar registrado toda
+                            nossa gratidão aos advogados. Dr. Thiago com quem tivemos o primeiro contato, Dr. Rodrigo,
+                            Dr. Wagner, Dr. Anderson..."</p>
+                        <div class="flex items-center gap-4 border-t border-slate-50 pt-6">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary font-bold text-lg">
+                                C</div>
+                            <div>
+                                <p class="text-primary font-bold text-base leading-none mb-1">Camila dos Santos Pinto
+                                </p>
+                                <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Cliente
+                                    Verificada</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white p-10 rounded-3xl shadow-xl shadow-primary/5 border border-slate-50 relative group hover:-translate-y-2 transition-all duration-300">
+                        <i data-lucide="quote"
+                            class="absolute top-8 right-8 text-secondary/10 group-hover:text-secondary/20 transition-colors w-12 h-12"></i>
+                        <div class="flex gap-1 text-secondary mb-6">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-slate-700 italic mb-8 leading-relaxed text-sm">"Extremamente profissionais,
+                            cuidadosos e muito atenciosos. Super recomendo, que Deus continue abençoando a vida de
+                            vocês..."</p>
+                        <div class="flex items-center gap-4 border-t border-slate-50 pt-6">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary font-bold text-lg">
+                                L</div>
+                            <div>
+                                <p class="text-primary font-bold text-base leading-none mb-1">Lais Dos Santos</p>
+                                <p class="text-slate-400 text-[10px] uppercase tracking-widest font-bold">Cliente
+                                    Verificada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://www.google.com/search?q=FGM+advocacia+criminal+reviews" target="_blank"
+                        class="inline-flex items-center gap-2 text-primary font-bold hover:text-secondary transition-colors underline decoration-secondary decoration-2 underline-offset-8">
+                        Ver todas as avaliações no Google
+                        <i data-lucide="external-link" class="w-4.5 h-4.5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+                <div class="text-center mb-16">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="help-circle" class="text-secondary/40 w-10 h-10"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-serif text-primary mb-4 italic">Perguntas Frequentes</h2>
+                    <p class="text-slate-600">Orientações essenciais para sua segurança jurídica.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div
+                        class="border border-slate-100 rounded-2xl overflow-hidden transition-all shadow-sm hover:shadow-md">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between p-7 text-left bg-white transition-colors"
+                            data-index="0">
+                            <span class="text-lg font-bold text-primary pr-8">Fui preso em flagrante, o que devo fazer
+                                agora?</span>
+                            <div class="faq-icon shrink-0 transition-transform duration-300">
+                                <i data-lucide="plus" class="text-secondary w-6 h-6"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out open overflow-hidden">
+                            <div class="p-7 pt-0 text-slate-600 leading-relaxed border-t border-slate-50 bg-accent/20">
+                                O primeiro passo é manter o silêncio constitucional e exigir a presença de seu advogado.
+                                A Audiência de Custódia ocorrerá em até 24h, onde lutaremos para que você responda ao
+                                processo em liberdade.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div
+                        class="border border-slate-100 rounded-2xl overflow-hidden transition-all shadow-sm hover:shadow-md">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between p-7 text-left bg-white transition-colors"
+                            data-index="1">
+                            <span class="text-lg font-bold text-primary pr-8">Como funciona o acompanhamento em
+                                delegacia?</span>
+                            <div class="faq-icon shrink-0 transition-transform duration-300">
+                                <i data-lucide="plus" class="text-secondary w-6 h-6"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out closed overflow-hidden">
+                            <div class="p-7 pt-0 text-slate-600 leading-relaxed border-t border-slate-50 bg-accent/20">
+                                Nossa equipe se desloca imediatamente até a delegacia para acompanhar o depoimento,
+                                garantir que não haja abusos e orientar tecnicamente o cliente desde o primeiro minuto
+                                da abordagem policial.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div
+                        class="border border-slate-100 rounded-2xl overflow-hidden transition-all shadow-sm hover:shadow-md">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between p-7 text-left bg-white transition-colors"
+                            data-index="2">
+                            <span class="text-lg font-bold text-primary pr-8">O escritório atende aos domingos e
+                                madrugadas?</span>
+                            <div class="faq-icon shrink-0 transition-transform duration-300">
+                                <i data-lucide="plus" class="text-secondary w-6 h-6"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out closed overflow-hidden">
+                            <div class="p-7 pt-0 text-slate-600 leading-relaxed border-t border-slate-50 bg-accent/20">
+                                Sim. Mantemos um plantão 24 horas real, com advogados criminalistas prontos para
+                                intervir em casos de urgência, prisões, buscas e apreensões a qualquer hora do dia ou da
+                                noite.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ 4 -->
+                    <div
+                        class="border border-slate-100 rounded-2xl overflow-hidden transition-all shadow-sm hover:shadow-md">
+                        <button
+                            class="faq-toggle w-full flex items-center justify-between p-7 text-left bg-white transition-colors"
+                            data-index="3">
+                            <span class="text-lg font-bold text-primary pr-8">Quais as áreas de cobertura no Rio de
+                                Janeiro?</span>
+                            <div class="faq-icon shrink-0 transition-transform duration-300">
+                                <i data-lucide="plus" class="text-secondary w-6 h-6"></i>
+                            </div>
+                        </button>
+                        <div class="faq-content transition-all duration-300 ease-in-out closed overflow-hidden">
+                            <div class="p-7 pt-0 text-slate-600 leading-relaxed border-t border-slate-50 bg-accent/20">
+                                Atendemos presencialmente em Campo Grande, Bangu, Santa Cruz, Recreio, Guaratiba, Barra
+                                da Tijuca, Nova Iguaçu, Itaguaí e demais regiões do Rio de Janeiro.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INFO -->
+        <section id="contato" class="py-24 bg-primary text-white overflow-hidden relative">
+            <div class="container mx-auto px-4 md:px-8 relative z-10">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-sm font-bold text-secondary uppercase tracking-[0.2em] mb-4">Contato & Plantão</h2>
+                    <h3 class="text-3xl md:text-6xl font-serif mb-6">Atendimento Criminal Imediato</h3>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                        Não tome nenhuma decisão sem antes falar com um especialista. Estamos disponíveis agora para
+                        proteger sua liberdade e seus direitos.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+                    <div class="space-y-6">
+                        <div
+                            class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-sm flex gap-6 items-start hover:bg-white/10 transition-colors">
+                            <div class="bg-secondary p-4 rounded-2xl text-primary">
+                                <i data-lucide="map-pin" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-xl mb-2">Unidade Campo Grande</p>
+                                <p class="text-slate-400 leading-relaxed">
+                                    Plaza Office - Av. Maria Teresa, 260 - Bloco 1 - Sala 505 - Campo Grande - Rio de
+                                    Janeiro, RJ<br />
+                                    CEP: 23050-160
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white/5 border border-white/10 p-10 rounded-3xl backdrop-blur-sm flex gap-6 items-start hover:bg-white/10 transition-colors">
+                            <div class="bg-secondary p-4 rounded-2xl text-primary">
+                                <i data-lucide="phone" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-xl mb-2">Plantão 24 Horas</p>
+                                <p class="text-slate-400 mb-1">WhatsApp Principal: <span
+                                        class="text-white font-bold">(21) 99175-6457</span></p>
+                                <p class="text-slate-400">Atendimento 24h, inclusive feriados.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-secondary p-12 rounded-3xl flex flex-col justify-center items-center text-center shadow-2xl">
+                        <div class="mb-6 bg-primary/10 p-6 rounded-full inline-block animate-bounce">
+                            <i data-lucide="message-circle" class="w-12 h-12 text-primary"></i>
+                        </div>
+                        <h4 class="text-primary text-3xl font-serif font-bold mb-6 italic">Precisa de Ajuda Agora?</h4>
+                        <p class="text-primary/80 mb-10 text-lg font-medium">
+                            Clique no botão abaixo para iniciar um atendimento prioritário via WhatsApp diretamente com
+                            um de nossos advogados.
+                        </p>
+                        <a href="https://wa.me/5521991756457"
+                            class="w-full bg-primary hover:bg-[#071927] text-white font-bold py-6 px-8 rounded-2xl text-xl flex items-center justify-center gap-3 transition-all transform hover:scale-[1.03] shadow-xl group">
+                            Falar pelo WhatsApp Agora
+                            <i data-lucide="shield-check"
+                                class="group-hover:rotate-12 transition-transform w-6 h-6"></i>
+                        </a>
+                        <div class="mt-8 flex gap-4 text-primary font-bold items-center">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                            <a href="https://www.instagram.com/ferreira.garcia.moura_adv/" target="_blank"
+                                class="hover:underline">@fgm_advocacia_criminal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Background decoration -->
+            <div class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 100 L100 0 L100 100 Z" fill="white" />
+                </svg>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#071927] text-slate-400 py-12 border-t border-white/5">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <i data-lucide="scale" class="text-secondary w-8 h-8"></i>
+                        <div class="flex flex-col">
+                            <span class="font-serif text-white text-xl font-bold leading-none">FGM</span>
+                            <span class="text-[9px] text-secondary uppercase tracking-widest font-bold">Sociedade de
+                                Advogados</span>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Referência em advocacia criminal especializada em Campo Grande, RJ. Plantão 24h para garantir
+                        sua liberdade e seus direitos fundamentais.
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Áreas de Atendimento</p>
+                    <ul class="grid grid-cols-2 gap-2 text-xs">
+                        <li>• Campo Grande</li>
+                        <li>• Bangu</li>
+                        <li>• Santa Cruz</li>
+                        <li>• Recreio</li>
+                        <li>• Guaratiba</li>
+                        <li>• Nova Iguaçu</li>
+                        <li>• Itaguaí</li>
+                        <li>• Mangaratiba</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Nossa Unidade</p>
+                    <p class="text-sm mb-2">Plaza Office - Av. Maria Teresa, 260 - Bloco 1 - Sala 505</p>
+                    <p class="text-sm mb-4">Campo Grande, Rio de Janeiro - RJ, 23050-160</p>
+                    <p class="text-sm">OAB/RJ: Consultar no escritório</p>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <p>© <span id="year"></span> FGM Advocacia Criminal. Todos os direitos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-secondary transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-secondary transition-colors">Termos de Uso</a>
+                </div>
+                <p>Perto da Estrada do Monteiro | Atendimento em todo o RJ</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/5521991756457" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-[999] group" aria-label="Falar no WhatsApp">
+        <div
+            class="absolute -top-12 right-0 bg-white text-primary text-xs font-bold px-3 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-secondary/20">
+            Advogado Online 24h
+        </div>
+        <div
+            class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 animate-bounce shadow-green-500/20 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.396.015 12.03c0 2.12.553 4.189 1.603 6.06L0 24l6.117-1.605a11.793 11.793 0 005.925 1.594h.005c6.635 0 12.032-5.396 12.035-12.03a11.761 11.761 0 00-3.483-8.484" />
+            </svg>
+        </div>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Header Scroll Effect
+        const header = document.getElementById('main-header');
+        const logoText = document.getElementById('logo-text');
+        const logoSubtext = document.getElementById('logo-subtext');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const menuToggle = document.getElementById('menu-toggle');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-transparent', 'py-5');
+                header.classList.add('bg-primary/95', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+                logoText.classList.remove('text-primary');
+                logoText.classList.add('text-white');
+                logoSubtext.classList.remove('text-primary/70');
+                logoSubtext.classList.add('text-secondary');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    link.classList.add('text-white/90');
+                });
+            } else {
+                header.classList.add('bg-transparent', 'py-5');
+                header.classList.remove('bg-primary/95', 'backdrop-blur-md', 'py-3', 'shadow-lg');
+                logoText.classList.add('text-primary');
+                logoText.classList.remove('text-white');
+                logoSubtext.classList.add('text-primary/70');
+                logoSubtext.classList.remove('text-secondary');
+                navLinks.forEach(link => {
+                    link.classList.add('text-primary');
+                    link.classList.remove('text-white/90');
+                });
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden-menu');
+                mobileMenu.classList.add('open-menu');
+                menuToggle.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
+            } else {
+                mobileMenu.classList.add('hidden-menu');
+                mobileMenu.classList.remove('open-menu');
+                menuToggle.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden-menu');
+                mobileMenu.classList.remove('open-menu');
+                menuToggle.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        // FAQ Toggle
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('.faq-icon');
+                const isOpen = content.classList.contains('open');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(otherContent => {
+                    if (otherContent !== content) {
+                        otherContent.classList.remove('open');
+                        otherContent.classList.add('closed');
+                        otherContent.previousElementSibling.querySelector('.faq-icon').innerHTML = '<i data-lucide="plus" class="text-secondary w-6 h-6"></i>';
+                    }
+                });
+
+                if (isOpen) {
+                    content.classList.remove('open');
+                    content.classList.add('closed');
+                    icon.innerHTML = '<i data-lucide="plus" class="text-secondary w-6 h-6"></i>';
+                } else {
+                    content.classList.add('open');
+                    content.classList.remove('closed');
+                    icon.innerHTML = '<i data-lucide="minus" class="text-secondary w-6 h-6"></i>';
+                }
+                lucide.createIcons();
+            });
+        });
+
+        // Schema JSON-LD
+        const schemaData = {
+            "@context": "https://schema.org",
+            "@type": "Attorney",
+            "name": "FGM Advocacia Criminal",
+            "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+            "url": "https://www.fgmadvocacia.ag5agencia.site/inicio",
+            "telephone": "+5521991756457",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Plaza Office - Av. Maria Teresa, 260 - Bloco 1 - Sala 505",
+                "addressLocality": "Campo Grande",
+                "addressRegion": "RJ",
+                "postalCode": "23050-160",
+                "addressCountry": "BR"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -22.9063515,
+                "longitude": -43.5686261,
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+            },
+            "areaServed": [
+                "Campo Grande", "Bangu", "Santa Cruz", "Recreio dos Bandeirantes", "Guaratiba", "Nova Iguaçu", "Itaguaí", "Paciência", "Cosmos", "Senador Vasconcelos"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "87"
+            }
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(schemaData);
+        document.head.appendChild(script);
+    </script>
+</body>
+
+</html>
