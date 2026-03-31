@@ -1,0 +1,7 @@
+{
+  "name": "LP - FGM Advocacia Criminal 01",
+  "description": "Landing page de alta conversão para o escritório FGM Advocacia Criminal, especializado em defesa criminal humanizada e estratégica no Rio de Janeiro e Campo Grande.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
